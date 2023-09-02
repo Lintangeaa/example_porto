@@ -17,6 +17,11 @@ body {
   box-shadow: 0px 0px 10px #181c24;
 }
 
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: white;
+}
+
 .navbar .nav-link {
   font-size: 16px;
   font-weight: bolder;
@@ -54,31 +59,23 @@ body {
   transform: scale(1.2);
 }
 
-.aboutme h1 {
+.aboutme h1,
+.education h1,
+.portofolio h1,
+.contact h1 {
   background: linear-gradient(
     90deg,
     rgba(0, 255, 158, 1) 13%,
     rgba(0, 255, 235, 1) 64%
   );
-  -webkit-background-clip: text; /* Untuk mendukung beberapa browser */
-  color: transparent; /* Membuat teks aslinya transparan */
+  -webkit-background-clip: text;
+  color: transparent;
   font-weight: 600;
 }
 
 .education {
   background-color: #383444;
-  height: screen;
-}
-
-.education h1 {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 255, 158, 1) 13%,
-    rgba(0, 255, 235, 1) 64%
-  );
-  -webkit-background-clip: text; /* Untuk mendukung beberapa browser */
-  color: transparent; /* Membuat teks aslinya transparan */
-  font-weight: 600;
+  height: 90vh;
 }
 
 .education-timeline {
@@ -142,20 +139,9 @@ body {
   padding: 100px 0px 20px;
 }
 
-.portofolio h1 {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 255, 158, 1) 13%,
-    rgba(0, 255, 235, 1) 64%
-  );
-  -webkit-background-clip: text; /* Untuk mendukung beberapa browser */
-  color: transparent; /* Membuat teks aslinya transparan */
-  font-weight: 600;
-}
-
 .card {
   width: 18rem;
-  overflow: hidden; /* Menyembunyikan konten yang melebihi ukuran card */
+  overflow: hidden;
 }
 
 .portofolio img {
@@ -197,32 +183,50 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /* Warna latar belakang awalnya transparan */
+  background-color: rgba(255, 255, 255, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Mulai dengan opacity 0 (transparan) */
+  opacity: 0;
   transition: background-color 0.3s, opacity 0.3s;
 }
 
 .overlay p {
   margin: 0;
   font-size: 12px;
-  color: black; /* Warna teks putih */
+  color: black;
 }
 
 .card:hover .overlay {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Warna latar belakang ketika dihover */
-  opacity: 1; /* Ubah opacity menjadi 1 (tidak transparan) */
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+.contact {
+  background-color: #28242c;
+}
+
+footer {
+  background-color: #28242c;
+}
+
+footer .container {
+  height: 15vh;
+  border-top: 0.5px solid rgba(0, 255, 158, 1);
+}
+
+footer p {
+  color: rgba(0, 255, 158, 1);
+}
+
+input[type="submit"] {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 158, 1) 13%,
+    rgba(0, 255, 235, 1) 64%
+  );
+  color: black;
+  width: 40%;
+  margin: auto;
 }

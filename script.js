@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     )
   }
 
-  // Fungsi untuk menambahkan kelas aktif pada elemen navbar sesuai dengan elemen yang terlihat di viewport
   function setActiveNavbarLink() {
     const sections = document.querySelectorAll("section")
     sections.forEach((section) => {
@@ -40,4 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", setActiveNavbarLink)
+
+  emailjs.init("B2WvpJsae_tLiKdjx")
+
+  const btn = document.getElementById("button")
+
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault()
+
+      btn.value = "Sending..."
+
+      const serviceID = "service_x9ztinp"
+      const templateID = "template_h598rq3"
+
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          btn.value = "Send Email"
+          alert("email sent")
+          document.getElementById("from_name").value = ""
+          document.getElementById("reply_to").value = ""
+          document.getElementById("message").value = ""
+        },
+        (err) => {
+          btn.value = "Send Email"
+          alert(JSON.stringify(err))
+        }
+      )
+    })
 })

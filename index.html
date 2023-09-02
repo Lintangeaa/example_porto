@@ -104,7 +104,9 @@
         <h5 class="text-white animate__animated animate__fadeIn">
           Web Developer & Odoo ERP Developer
         </h5>
-        <a href="/public/cv.pdf" download
+        <a
+          href="https://lintangeaa.github.io/example_porto/public/cv.pdf"
+          download
           ><button
             class="btn btn-light text-black animate__animated animate__bounceInDown"
           >
@@ -130,7 +132,7 @@
         <fieldset class="w-50 p-4 animate__animated animate__fadeInLeft">
           <picture class="position-relative z-1">
             <img
-              src="/public/img/mypoto.png"
+              src="https://lintangeaa.github.io/example_porto/public/img/mypoto.png"
               class="mypoto img-fluid shadow-lg"
               alt="Lintang Danndung Prakoso"
               width="300"
@@ -175,8 +177,8 @@
                 <div
                   class="education-content animate__animated animate__fadeInLeft"
                 >
-                  <h5>Bachelor's Degree in Computer Science</h5>
-                  <p>University Name, Graduation Year</p>
+                  <h5>Science</h5>
+                  <p>Banyumas High School, 2020</p>
                 </div>
               </div>
 
@@ -184,16 +186,16 @@
                 <div
                   class="education-content animate__animated animate__fadeInRight"
                 >
-                  <h5>High School Diploma</h5>
-                  <p>High School Name, Graduation Year</p>
+                  <h5>Junior Backend Developer</h5>
+                  <p>Binar Academy, 2022</p>
                 </div>
               </div>
               <div class="education-item">
                 <div
                   class="education-content animate__animated animate__fadeInLeft"
                 >
-                  <h5>Master's Degree in Computer Science</h5>
-                  <p>University Name, Graduation Year</p>
+                  <h5>Information Systems</h5>
+                  <p>Institut Teknologi Telkom Purwokerto</p>
                 </div>
               </div>
             </div>
@@ -213,7 +215,7 @@
           <div class="col-12 col-md-4">
             <div class="card mx-auto p-1 image-container" style="width: 18rem">
               <img
-                src="/public/img/tsgitdev.png"
+                src="https://lintangeaa.github.io/example_porto/public/img/tsgitdev.png"
                 alt="Google Logo"
                 class="card-img-top img-fluid"
               />
@@ -238,7 +240,7 @@
           <div class="col-12 col-md-4">
             <div class="card mx-auto p-1 image-container" style="width: 18rem">
               <img
-                src="/public/img/medicare.png"
+                src="https://lintangeaa.github.io/example_porto/public/img/medicare.png"
                 alt="Google Logo"
                 class="card-img-top img-fluid"
               />
@@ -262,7 +264,7 @@
           <div class="col-12 col-md-4">
             <div class="card mx-auto p-1 image-container" style="width: 18rem">
               <img
-                src="/public/img/digilivery.png"
+                src="https://lintangeaa.github.io/example_porto/public/img/digilivery.png"
                 alt="Google Logo"
                 class="card-img-top img-fluid"
               />
@@ -287,7 +289,7 @@
           <div class="col-12 col-md-4">
             <div class="card mx-auto p-1 image-container" style="width: 18rem">
               <img
-                src="/public/img/antariksa.png"
+                src="https://lintangeaa.github.io/example_porto/public/img/antariksa.png"
                 alt="Google Logo"
                 class="card-img-top img-fluid"
               />
@@ -310,9 +312,61 @@
       </div>
     </section>
 
-    <footer class="bg-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Sticky bottom</a>
+    <section id="contact" class="contact text-center py-5">
+      <h1 class="display-5">CONTACT ME</h1>
+      <div class="container">
+        <form id="contact-form">
+          <fieldset class="d-flex mb-5 mt-5">
+            <div class="w-50">
+              <div class="form-floating w-75">
+                <input
+                  type="text"
+                  name="from_name"
+                  class="form-control"
+                  id="from_name"
+                  placeholder="your name"
+                />
+                <label for="from_name">Name</label>
+              </div>
+            </div>
+            <div class="w-50">
+              <div class="form-floating w-75 ms-auto">
+                <input
+                  type="email"
+                  name="reply_to"
+                  class="form-control"
+                  id="reply_to"
+                  placeholder="your email"
+                />
+                <label for="reply_to">Email</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-floating">
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              class="form-control"
+              placeholder="Leave a message here"
+              id="message"
+              style="height: 200px"
+            ></textarea>
+            <label for="message">Message</label>
+          </div>
+          <input
+            type="submit"
+            id="button"
+            value="Send Email"
+            class="btn btn-primary mt-5"
+          />
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container d-flex justify-content-center align-items-center">
+        <p>LINTANG © 2023. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
 
@@ -321,5 +375,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </body>
 </html>
